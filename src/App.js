@@ -10,7 +10,7 @@ const App = () => {
       try {
         const response = await axios.get('http://192.168.2.30:5000/api/data');
         const data = response.data;
-        console.log(data[0].hostreport['Total Cpu Usage']);
+        
         renderCPUChart(data);
         renderMemoryChart(data);
       } catch (error) {
